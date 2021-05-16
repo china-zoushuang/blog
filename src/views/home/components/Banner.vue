@@ -70,7 +70,7 @@ export default {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: black url('~@/assets/images/wolf-girl.jpg') top left/auto 100% no-repeat;
+    background: black url('~@/assets/images/about/wolf-girl.jpg') top left/auto 100% no-repeat;
 
     .banner__article {
       position: absolute;

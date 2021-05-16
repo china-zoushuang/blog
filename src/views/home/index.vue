@@ -24,11 +24,14 @@
 
 <script>
 import Nav from '@/components/Nav.vue';
-import Banner from './Banner.vue';
-import Gallery from './Gallery.vue';
-import Article from './Article.vue';
-import Tag from './Tag.vue';
-import data from './data.json';
+import about from '@/constants/about';
+import gallery from '@/constants/gallery';
+import movie from '@/constants/movie';
+import read from '@/constants/read';
+import Banner from './components/Banner.vue';
+import Gallery from './components/Gallery.vue';
+import Article from './components/Article.vue';
+import Tag from './components/Tag.vue';
 
 export default {
   components: {
@@ -44,7 +47,9 @@ export default {
   },
   computed: {
     rawData() {
-      return data;
+      return {
+        about, gallery, movie, read,
+      };
     },
   },
 };

@@ -34,17 +34,17 @@
         <div class="section_article_content__carousel">
           <Carousel
             slick="buttons"
-            :list="currentCover.children"
+            :list="carouselList"
             :activeIndex="activeArticle"
             @change="activeArticle = $event">
             <div
-              v-for="(item, index) in currentCover.children"
+              v-for="(item, index) in carouselList"
               :key="index"
               class="section_article_content_carousel__item">
               <div class="section_article_content_carousel_item__img">
                 <img
-                  :src="require(`@/assets/images/${currentArticle.coverImage}`)"
-                  :alt="currentArticle.coverImage">
+                  :src="require(`@/assets/images/${item.coverImage}`)"
+                  :alt="item.coverImage">
               </div>
             </div>
           </Carousel>
@@ -104,7 +104,10 @@ export default {
       return this.cover[this.selectedCover];
     },
     currentArticle() {
-      return this.currentCover.children[this.activeArticle];
+      return this.currentCover.children[this.activeArticle] || this.currentCover;
+    },
+    carouselList() {
+      return this.currentCover.children.length ? this.currentCover.children : [this.currentCover];
     },
   },
 };
@@ -142,6 +145,9 @@ export default {
           display: block;
           margin: 15px 0;
           font-size: 16px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
 
         .section_cover_item__img {
