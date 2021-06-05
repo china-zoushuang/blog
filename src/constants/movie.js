@@ -2,6 +2,16 @@ export default {
   title: 'Movie',
   data: [
     {
+      date: '2021.06.05',
+      coverImage: 'movie/the-magic-of-ordinary-days.jpg',
+      title: '< The Magic of Ordinary Days >',
+      description: '中文翻译《平凡岁月的魅力》<br>又是一部因为刷到小红书而感兴趣的电影，只因男主对待爱情的理解和处理触动到我了，这就是我对爱情的处理，平平淡淡且真挚浓烈。<br><br>还有电影博主对这部电影的解读 “他努力的对她好，不是想让她爱上自己，而是希望她能得到更好的”，我完全认，也这样理解爱情，更让我忽然发现，原来爱情从始至终都存在于每个个体，他可能不需要回应就已是充满了爱情。',
+      tags: ['电影', '爱情'],
+      createdTime: '20210605',
+      updatedTime: '',
+      children: [],
+    },
+    {
       date: '2021.05.03',
       coverImage: 'movie/shoufagongmin.webp',
       title: '< Law Abiding Citizen >',

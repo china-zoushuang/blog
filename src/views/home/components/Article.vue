@@ -152,7 +152,12 @@ export default {
 
         .section_cover_item__img {
           position: relative;
+          display: flex;
+          align-items: center;
           width: 100%;
+          height: 17vw;
+          overflow: hidden;
+          background-color: #000;
 
           img {
             width: 100%;
