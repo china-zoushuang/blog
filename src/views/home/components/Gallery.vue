@@ -11,7 +11,7 @@
           v-for="(childItem, childIndex) in item"
           :key="childIndex"
           :style="{
-            width: index === 1 ? ((childIndex + 1) % 3 === 0 ? '50%' : '100%') : '100%'
+            width: index === 1 ? ((childIndex + 1) % 4 === 0 ? '50%' : '100%') : '100%'
           }"
           class="gallery_list__item">
           <img
@@ -54,9 +54,8 @@ export default {
   computed: {
     list() {
       const rawData = this.source.data;
-      const splitIndex = Math.floor(rawData.length / 2);
-      const leftList = rawData.slice(0, splitIndex);
-      const rightList = rawData.slice(splitIndex, rawData.length);
+      const leftList = rawData.slice(0, 4);
+      const rightList = rawData.slice(4, rawData.length);
       return [leftList, rightList];
     },
   },
